@@ -46,7 +46,7 @@ public class InTheatersTaskLoader extends AsyncTaskLoader<TaskLoaderResult<InThe
         TaskLoaderResult<InTheaters> result = new TaskLoaderResult<>();
 
         ApiService api = ApiProvider.getInstance(mContext).getApiService();
-        Call<InTheaters> call = api.getInTheaters("福州");
+        Call<InTheaters> call = api.getInTheaters("深圳");
         try {
             result.setData(call.execute().body());
         } catch (IOException e) {
